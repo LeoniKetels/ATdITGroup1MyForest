@@ -1,0 +1,53 @@
+DROP DATABASE myforestDB;
+CREATE DATABASE myforestDB;
+USE myforestDB; 
+
+CREATE TABLE `area` (
+  `id` int(11) PRIMARY KEY AUTO_INCREMENT,
+  `description` varchar(100) DEFAULT NULL);
+
+INSERT INTO `area` (`id`, `description`) VALUES
+(1, '49.349187, 7.923600'),
+(2, '49.349126, 7.923590'),
+(3, '49.349132, 7.923678'),
+(4, '49.349247, 7.923544'),
+(5, '49.349111, 7.923605'),
+(6, '49.349301, 7.923683'),
+(7, '49.349277, 7.923500'),
+(8, '49.349144, 7.923634'),
+(9, '49.349121, 7.923721');
+
+
+
+CREATE TABLE `problem` (
+  `id` int(11) PRIMARY KEY AUTO_INCREMENT,
+  `description` varchar(100) DEFAULT NULL,
+  `status_id` int(11) DEFAULT NULL,
+  `area_id` int(11) DEFAULT NULL,
+  `tree` varchar(50) DEFAULT NULL
+);
+
+INSERT INTO `problem` (`id`, `description`, `status_id`, `area_id`, `tree`) VALUES
+(1, 'Der Baum ist kaputt', 1, 1, 'Buche'),
+(2, 'Buche mit ', 1, 2, 'Buche'),
+(3, 'Tanne muss gefällt werden', 1, 1, 'Tanne'),
+(4, 'Baum ist kaputt', 1, 1, 'Ahorn'),
+(5, 'Baum auf Gehweg', 2, 5, 'Birke'),
+(6, 'Birke abgestorben', 3, 5, 'Birke'),
+(7, 'Gewitterschäden', 4, 5, '');
+
+
+CREATE TABLE `status` (
+  `id` int(11) PRIMARY KEY AUTO_INCREMENT,
+  `description` varchar(100) DEFAULT NULL
+);
+
+
+INSERT INTO `status` (`id`, `description`) VALUES
+(1, 'Offen'),
+(2, 'In Bearbeitung'),
+(3, 'Bearbeitet'),
+(4, 'In Warteschlange');
+
+CREATE USER 'User' @'localhost' IDENTIFIED BY 'myforest';
+GRANT ALL PRIVILEGES ON myforestDB.* TO 'User'@'localhost';
