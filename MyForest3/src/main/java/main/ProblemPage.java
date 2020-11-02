@@ -95,7 +95,7 @@ public class ProblemPage extends Container{
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			AddProblemForm fenster = new AddProblemForm();
-	        fenster.setTitle("Problem hinzufügen");
+	        fenster.setTitle("Problem hinzufuegen");
 	        fenster.setSize(500, 300);
 	        fenster.setVisible(true);
 		}
