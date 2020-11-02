@@ -11,7 +11,9 @@ Starten der Anwendung über Eclipse:
   - Selbstgewähltes Root-Passwort eingeben
   - Den Inhalt des Files "SQLStatements", welches Sie hier im Git finden, kopieren und in das MySQL Client-Fenster einfügen
  
-2. Anwendung in Eclipse Starten
+2. Jar-Datei (myForest.jar) vom Release (MyForest Launch) herunterladen und starten
+2a (alternativ)
+  - Anwendung in Eclipse Starten
   - Falls Sie Schritt 1 nicht zuvor erledigt haben, sollten Sie damit zuerst beginnen ;)
   - Eclipse starten
   - Springen Sie zu Punkt 7, wenn Sie unser Projekt bereits Importiert haben
