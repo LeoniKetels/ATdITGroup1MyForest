@@ -38,7 +38,7 @@ public class HomeScreen extends Container {
 	setLayout(new BorderLayout());
 	panel1 = new JPanel();
 	panel2 = new JPanel();
-	URL url = getClass().getResource("/HomeImage.png");           
+	URL url = HomeScreen.class.getResource("/HomeImage.png");           
 	ImageIcon bild = new ImageIcon(url);
 	label = new JLabel (bild);
 	start = new JButton("Start");

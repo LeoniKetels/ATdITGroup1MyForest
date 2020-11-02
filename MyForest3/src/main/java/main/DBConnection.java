@@ -18,7 +18,6 @@ public class DBConnection {
 	public DBConnection()  {
 		try {
 		if(DBConnection.conn == null) {
-		
 		conn = DriverManager.getConnection(
 				"jdbc:mysql://localhost/myforestDB?"
                         + "user=User&password=myforest");
@@ -29,7 +28,6 @@ public class DBConnection {
 					"Pruefen Sie, ob Sie alle Schritte zur erfolgreichen Datenbankverbindung durchgefuehrt haben.",
 					se.getMessage());
 		}
-
 //		conn = DriverManager.getConnection(
 //				"jdbc:mysql://sql7.freemysqlhosting.net:3306/sql7355900?user=sql7355900&password=kHaqmas865");
 //		}

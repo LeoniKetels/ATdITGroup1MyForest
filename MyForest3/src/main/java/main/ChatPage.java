@@ -22,7 +22,7 @@ public class ChatPage extends Container{
     setLayout(new BorderLayout());
     panel = new JPanel();
     menuBar = new MenuBar(parentFrame);
-    URL url = getClass().getResource("/Chat.png");           
+    URL url = ChatPage.class.getResource("/Chat.png");           
     ImageIcon bild = new ImageIcon(url);
     label = new JLabel (bild);
     panel.add(label);
