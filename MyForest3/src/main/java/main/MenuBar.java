@@ -22,10 +22,10 @@ public class MenuBar extends JPanel {
 	    
 	    
 		mainButton 		= new JButton(icon);
-		shopButton 		= new JButton("Shop");
-		chatButton 		= new JButton("Chat");
-		problemsButton 	= new JButton("Probleme");
-		tasksPage	 	= new JButton("Aufgaben");
+		shopButton 		= new JButton(StartClass.translation.getString("Shop"));
+		chatButton 		= new JButton(StartClass.translation.getString("Chat"));
+		problemsButton 	= new JButton(StartClass.translation.getString("Probleme"));
+		tasksPage	 	= new JButton(StartClass.translation.getString("Aufgaben"));
 		
 		
 	    mainButton.addActionListener(new NavButtonListener( parentFrame, Pages.MAIN_MENU));

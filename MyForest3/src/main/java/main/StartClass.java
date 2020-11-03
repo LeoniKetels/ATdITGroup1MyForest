@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Container;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 import javax.swing.JFrame;
 
@@ -14,6 +16,7 @@ import javax.swing.JFrame;
  */
 public class StartClass extends JFrame {
 	private Container c;
+	public static ResourceBundle translation;
 	
 	public StartClass() {
 		c = this.getContentPane();
@@ -25,6 +28,11 @@ public class StartClass extends JFrame {
 		
 	}
 	public static void main(String[] args) {
+		
+		//i18n
+		Locale.setDefault(Locale.GERMANY);
+		translation = ResourceBundle.getBundle("i18n/main_messages/messages");
+		
 		JFrame start = new StartClass();
 		start.setContentPane(new HomeScreen(start));
 		start.setTitle("My Forest");

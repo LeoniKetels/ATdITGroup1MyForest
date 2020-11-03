@@ -27,7 +27,10 @@ public class ChangeStatusForm extends JFrame{
 
 	    labelCurrentStatus = new JLabel("jetziger Status: " + statusDescription);
 		
-		String[] statuses = {"Offen", "in Bearbeitung","Bearbeitet", "in Warteschlange"};
+		String[] statuses = {StartClass.translation.getString("Offen"),
+							 StartClass.translation.getString("inBearbeitung"),
+							 StartClass.translation.getString("Bearbeitet"), 
+							 StartClass.translation.getString("inWarteschlange")};
 		JComboBox<String> statusMenu = new JComboBox<String>(statuses);
 		
 		JButton save = new JButton("�nderungen speichern");

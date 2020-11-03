@@ -28,14 +28,14 @@ public class AddProblemForm extends JFrame {
 		Container c = getContentPane();
         c.setLayout(new GridLayout(10, 1));
         String[] namen = new String []
-                {"Eiche", "Buche", "Tanne", "Ahorn", "Kastanie"};
+                {StartClass.translation.getString("Eiche"), StartClass.translation.getString("Buche"), StartClass.translation.getString("Tanne"), StartClass.translation.getString("Ahorn"), StartClass.translation.getString("Kastanie")};
         Integer[] gebiet = new Integer []
                 {1,2,3,4,5,6,7,8,9};
-        labelProblem = new JLabel("Problembeschreibung:");
-        labelBaumart = new JLabel("Baumart:");
-        labelGebiet = new JLabel("Gebiet:");
-        labelStandort = new JLabel("Standortkoordinaten:");
-        labelBild = new JLabel("Bild:");
+        labelProblem = new JLabel(StartClass.translation.getString("Problembeschreibung:"));
+        labelBaumart = new JLabel(StartClass.translation.getString("Baumart:"));
+        labelGebiet = new JLabel(StartClass.translation.getString("Gebiet:"));
+        labelStandort = new JLabel(StartClass.translation.getString("Standortkoordinaten:"));
+        labelBild = new JLabel(StartClass.translation.getString("Bild:"));
         problemTextArea = new JTextArea();
         problemTextArea.setLineWrap(true);
         scrollpane = new JScrollPane(problemTextArea);
@@ -45,7 +45,7 @@ public class AddProblemForm extends JFrame {
         scrollpane2 = new JScrollPane(standortTextArea);
         bildTextArea = new JTextArea();
         scrollpane3 = new JScrollPane(bildTextArea);
-        JButton knopf = new JButton("Hinzufuegen");
+        JButton knopf = new JButton(StartClass.translation.getString("Hinzufuegen"));
         knopf.addActionListener(new ButtonListener());
         c.add(labelProblem);
         c.add(scrollpane);
