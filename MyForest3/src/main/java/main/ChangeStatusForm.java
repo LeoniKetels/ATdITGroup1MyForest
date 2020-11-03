@@ -15,7 +15,7 @@ public class ChangeStatusForm extends JFrame{
 	JLabel labelCurrentStatus;
 	
 	public ChangeStatusForm(Problem problem) {
-		this.setTitle(problem.getDescription() + ": Status �ndern");
+		this.setTitle(problem.getDescription() + ": Status aendern");
 		String statusDescription = "";
 		Container c = getContentPane();
 		c.setLayout(new GridLayout(3,1));
@@ -33,7 +33,7 @@ public class ChangeStatusForm extends JFrame{
 							 StartClass.translation.getString("inWarteschlange")};
 		JComboBox<String> statusMenu = new JComboBox<String>(statuses);
 		
-		JButton save = new JButton("�nderungen speichern");
+		JButton save = new JButton("Aenderungen speichern");
 		save.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
